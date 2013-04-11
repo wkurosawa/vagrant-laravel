@@ -1,1 +1,0 @@
-Congratulations! Vagrant is up and running!
