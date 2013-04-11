@@ -1,8 +1,8 @@
 class laravel {
 
-  # Set the correct permissions on the 'app/www/storage' directory, if it exists.
+  # Set the correct permissions on the 'wwww/app/storage' directory, if it exists.
   if $storage_directory_exists == 'true' {
-    file { '/vagrant/app/www/storage':
+    file { '/vagrant/www/app/storage':
       mode    => 0777,
       recurse => true,
     }
