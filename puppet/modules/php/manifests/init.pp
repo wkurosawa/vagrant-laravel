@@ -33,6 +33,10 @@ class php {
     require => Package['apache2'],
   }
 
+  package { 'php5-curl':
+    ensure => 'present',
+  }
+
 
   # Upgrade PEAR, install PHPUnit.
   exec { 'pear-upgrade':
