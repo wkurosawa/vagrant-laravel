@@ -1,3 +1,3 @@
 [submodule "www"]
 	path = www
-	url = git@bitbucket.org:mileswebdesign/99jobs-vagrant.git
+	url = git@bitbucket.org/wkurosawa/ninenine-laravel-2.git
