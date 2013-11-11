@@ -20,7 +20,7 @@ Vagrant.configure('2') do |config|
   # ----------------------------------------------------------------------------
   # UTC ALL THE THINGS!
   # @see http://www.xormedia.com/utc-is-the-only-real-timezone/
-  config.vm.provision :shell, :inline => 'echo "Etc/UTC" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata'
+  config.vm.provision :shell, :inline => 'echo "America/Sao_Paulo" | sudo tee /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata'
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = 'puppet/manifests'
@@ -36,4 +36,7 @@ Vagrant.configure('2') do |config|
     # @see http://www.virtualbox.org/manual/ch03.html#settings-motherboard
     vb.customize ['modifyvm', :id, '--rtcuseutc', 'on']
   end
+
+  config.vm.synced_folder "www", "/vagrant/www", owner: "www-data", group: "www-data"
+
 end
