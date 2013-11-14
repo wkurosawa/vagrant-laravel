@@ -37,6 +37,6 @@ Vagrant.configure('2') do |config|
     vb.customize ['modifyvm', :id, '--rtcuseutc', 'on']
   end
 
-  config.vm.synced_folder "www", "/vagrant/www", owner: "www-data", group: "www-data"
+  # config.vm.synced_folder "www", "/vagrant/www", owner: "www-data", group: "www-data"
 
 end
